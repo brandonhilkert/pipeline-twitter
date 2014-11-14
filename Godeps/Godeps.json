@@ -1,0 +1,40 @@
+{
+	"ImportPath": "github.com/pipelinedeals/pipeline-twitter",
+	"GoVersion": "go1.3.3",
+	"Deps": [
+		{
+			"ImportPath": "github.com/ChimeraCoder/anaconda",
+			"Rev": "fee61094295920a63bb16db22fe7f5bc43a33380"
+		},
+		{
+			"ImportPath": "github.com/ChimeraCoder/tokenbucket",
+			"Rev": "c5a927568de7aad8a58127d80bcd36ca4e71e454"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/inject",
+			"Comment": "v1.0-rc1-4-g4b81725",
+			"Rev": "4b8172520a03fa190f427bbd284db01b459bfce7"
+		},
+		{
+			"ImportPath": "github.com/garyburd/go-oauth/oauth",
+			"Rev": "2018cfe9a4d172f9e1e2a22f0f5a73c618745587"
+		},
+		{
+			"ImportPath": "github.com/go-martini/martini",
+			"Comment": "v1.0-50-g7d32ea3",
+			"Rev": "7d32ea3fa6590565c928b90a48178b60b96df98f"
+		},
+		{
+			"ImportPath": "github.com/joho/godotenv",
+			"Rev": "aab3ea4ba68f8fe7492604240b01190d9efc4db4"
+		},
+		{
+			"ImportPath": "github.com/martini-contrib/render",
+			"Rev": "b65063311fac6cbf84d3538f5715f7847e648322"
+		},
+		{
+			"ImportPath": "github.com/oxtoacart/bpool",
+			"Rev": "0f78ff9152c03745d1a47c9023af1b424e202c07"
+		}
+	]
+}
