@@ -5,6 +5,7 @@ import (
 	"github.com/go-martini/martini"
 	_ "github.com/joho/godotenv/autoload"
 	"github.com/martini-contrib/render"
+	"net/http"
 	"net/url"
 	"os"
 )
@@ -13,6 +14,10 @@ func main() {
 
 	m := martini.Classic()
 	m.Use(render.Renderer())
+
+	m.Use(func(res http.ResponseWriter, req *http.Request) {
+		res.Header().Set("Access-Control-Allow-Origin", "*")
+	})
 
 	m.Get("/status", func() string {
 		return "up"
@@ -39,5 +44,6 @@ func main() {
 			r.JSON(400, newmap)
 		}
 	})
+
 	m.Run()
 }
