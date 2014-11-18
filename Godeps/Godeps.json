@@ -11,11 +11,6 @@
 			"Rev": "c5a927568de7aad8a58127d80bcd36ca4e71e454"
 		},
 		{
-			"ImportPath": "github.com/bradfitz/gomemcache/memcache",
-			"Comment": "release.r60-40-g72a6864",
-			"Rev": "72a68649ba712ee7c4b5b4a943a626bcd7d90eb8"
-		},
-		{
 			"ImportPath": "github.com/codegangsta/inject",
 			"Comment": "v1.0-rc1-4-g4b81725",
 			"Rev": "4b8172520a03fa190f427bbd284db01b459bfce7"
