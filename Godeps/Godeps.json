@@ -35,6 +35,10 @@
 		{
 			"ImportPath": "github.com/oxtoacart/bpool",
 			"Rev": "0f78ff9152c03745d1a47c9023af1b424e202c07"
+		},
+		{
+			"ImportPath": "github.com/pmylund/go-cache",
+			"Rev": "7d1d6d6ae935664bc8b80ab2b1fc7ab77a7e46da"
 		}
 	]
 }
