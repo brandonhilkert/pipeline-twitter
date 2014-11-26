@@ -37,12 +37,10 @@ func main() {
 	m.Get("/:screen_name", func(params martini.Params, r render.Render) {
 		screenName := params["screen_name"]
 
-		log.Println("Total number of cached users:", c.ItemCount())
-
 		if t, found := c.Get(screenName); found {
 			var tw []anaconda.Tweet
 
-			log.Println("Found tweets for", screenName)
+			log.Println("CACHE HIT: Found tweets for", screenName)
 			err := json.Unmarshal(t.([]byte), &tw)
 
 			if err == nil {
@@ -65,9 +63,19 @@ func main() {
 		v.Set("screen_name", screenName)
 		v.Set("count", "5")
 
+		log.Println("CACHE MISS: Getting tweets for", screenName)
 		tweets, err := api.GetUserTimeline(v)
 
-		go saveTweetsToCache(c, tweets, screenName)
+		go func() {
+			j, err := json.Marshal(tweets)
+			if err != nil {
+				log.Println("Error marshaling tweets:", err)
+			}
+
+			c.Set(screenName, j, 0)
+			log.Println("Saved tweets for:", screenName)
+			log.Println("Total number of cached users:", c.ItemCount())
+		}()
 
 		if err == nil {
 			newmap := map[string]interface{}{"response": tweets}
@@ -79,14 +87,4 @@ func main() {
 	})
 
 	m.Run()
-}
-
-func saveTweetsToCache(c *cache.Cache, t []anaconda.Tweet, s string) {
-	j, err := json.Marshal(t)
-	if err != nil {
-		log.Println("Error marshaling tweets:", err)
-	}
-
-	c.Set(s, j, 0)
-	log.Println("Saved tweets for:", s)
 }
