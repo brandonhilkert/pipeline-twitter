@@ -29,6 +29,10 @@
 			"Rev": "aab3ea4ba68f8fe7492604240b01190d9efc4db4"
 		},
 		{
+			"ImportPath": "github.com/martini-contrib/gorelic",
+			"Rev": "f8b0843aa3ab66d8734aa7d9acf399bdc197c65d"
+		},
+		{
 			"ImportPath": "github.com/martini-contrib/render",
 			"Rev": "b65063311fac6cbf84d3538f5715f7847e648322"
 		},
@@ -39,6 +43,19 @@
 		{
 			"ImportPath": "github.com/pmylund/go-cache",
 			"Rev": "7d1d6d6ae935664bc8b80ab2b1fc7ab77a7e46da"
+		},
+		{
+			"ImportPath": "github.com/yvasiyarov/go-metrics",
+			"Rev": "57bccd1ccd43f94bb17fdd8bf3007059b802f85e"
+		},
+		{
+			"ImportPath": "github.com/yvasiyarov/gorelic",
+			"Comment": "v0.0.6-6-ged461c0",
+			"Rev": "ed461c0552ffe5e4bee53eb23c0edacc13c82555"
+		},
+		{
+			"ImportPath": "github.com/yvasiyarov/newrelic_platform_go",
+			"Rev": "b21fdbd4370f3717f3bbd2bf41c223bc273068e6"
 		}
 	]
 }
